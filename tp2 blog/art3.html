@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cómo veo a AAAJ hoy - Blog AAAJ</title>
+  <link rel="icon" type="image/png" href="iconos/icono de la pagina web.png" />
+  <link rel="stylesheet" href="Css/style4.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="fondo"></div>
+
+  <div class="contenido">
+    <header>
+      <nav>
+        <a href="index.html#Inicio">Inicio</a>
+        <a href="index.html#art1">Artículos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Cómo veo a AAAJ hoy: entre la ilusión y lo que todavía nos falta</h1>
+      <time datetime="2025-06-10">10 de junio de 2025</time>
+
+      <article class="articulo3">
+        <p>
+          Hoy, veo a Argentinos Juniors como uno de los mejores equipos del fútbol argentino. 
+          Si no salimos campeones, fue por el formato injusto de partidos únicos, no por falta de juego ni de identidad.
+        </p>
+        <p>
+          Venimos de un año durísimo, donde acumulamos récords negativos: fechas sin meter goles, 
+          sin ganar de visitante, sin levantar cabeza. Pero todo cambió. 
+          Llegó un técnico nuevo que nos representa a los hinchas, que respeta la historia de este club —una historia de buen juego, de potrero, de pibes con hambre—. 
+          Hoy, seguimos manteniendo ese récord que nos enorgullece: ser el equipo con más partidos consecutivos incluyendo al menos un juvenil entre los once titulares.
+        </p>
+        <p>
+          Como hinchas, sentimos orgullo. Este equipo nos devuelve ilusión, nos hace creer. 
+          Sabemos que estamos en el camino correcto. Y lo decimos sin miedo: <strong>la sexta estrella va a llegar</strong>. Es cuestión de tiempo.
+        </p>
+        <p style="text-align: center;"><strong>¡Vamos los Bichos, carajo!</strong></p>
+
+        <picture>
+          <source media="(min-width: 1024px)" srcset="imagenes/EQUIPOGRANDE.jpg">
+          <source media="(min-width: 768px)" srcset="imagenes/EQUIPOMEDIANO.jpg">
+          <img src="imagenes/EQUIPOC.jpg" alt="Equipo AAAJ" style="max-width: 100%;">
+        </picture>
+
+        <nav class="paginacion">
+          <a href="art2.html">← Anterior</a>
+          <a href="art4.html">Siguiente →</a>
+        </nav>
+      </article>
+    </main>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form id="formulario-contacto">
+        <label for="nombre">Nombre:</label><br />
+        <input type="text" id="nombre" name="nombre" required /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="mensaje">Mensaje:</label><br />
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br /><br />
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <div id="mensaje-enviado" class="mensaje-exito">
+      <strong>¡Gracias por tu mensaje!</strong> <br />
+      Lo recibí correctamente y te responderé lo antes posible.
+      Agradezco mucho que te hayas tomado el tiempo de escribirme y visitar este espacio dedicado con tanta pasión a Argentinos Juniors.
+      <br />¡Tu apoyo significa mucho para mí!
+    </div>
+
+    <footer>
+      <p style="text-align: center;">&copy; 2025 Ignacio Cordara. Todos los derechos reservados.</p>
+      <ul>
+        <li>📧 <a href="mailto:igna0409@gmail.com">igna0409@gmail.com</a></li>
+        <li>📷 <a href="https://www.instagram.com/ignacio_cordara/" target="_blank">@ignacio_cordara</a></li>
+        <li>📱 <a href="https://wa.me/5491125110251" target="_blank">+54 9 11 2511-0251</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script>
+    const formulario = document.getElementById('formulario-contacto');
+    const mensaje = document.getElementById('mensaje-enviado');
+
+    formulario.addEventListener('submit', function (event) {
+      event.preventDefault();
+      mensaje.classList.add('visible');
+      formulario.reset();
+      setTimeout(() => {
+        mensaje.classList.remove('visible');
+      }, 10000);
+    });
+  </script>
+</body>
+</html>

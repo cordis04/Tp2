@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ir a la cancha: más que fútbol, un ritual</title>
+  <link rel="icon" type="image/png" href="iconos/icono de la pagina web.png" />
+  <link rel="stylesheet" href="Css/style4.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="fondo"></div>
+  <div class="contenido">
+
+    <nav>
+      <a href="index.html#Inicio">Inicio</a>
+      <a href="index.html#art1">Artículos</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+
+    <main>
+      <header>
+        <h1>MÁS QUE UN SENTIMIENTO, UNA PASIÓN</h1>
+      </header>
+
+      <article class="articulo1">
+        <h2>Ir a la cancha: más que fútbol, un ritual</h2>
+        <time datetime="2025-06-10">10 de junio de 2025</time>
+
+        <p>
+          Cada partido no es solo un evento deportivo, es un ritual que respeto casi como una cábala. Desde hace años, mantengo la misma rutina: siempre voy con el mismo outfit, el mismo pantalón, la misma camiseta, como si eso también jugara su partido.
+        </p>
+        <p>
+          A la cancha voy con mi tío, infaltable compañero de tribuna. Siempre nos ubicamos en la misma zona, ya es nuestra cueva, nuestro refugio. Ahí cantamos, gritamos, sufrimos y festejamos como si estuviéramos adentro del campo. Nos abrazamos con cada gol como si fuera la primera vez.
+        </p>
+        <p>
+          El video que acompaña esta nota es de un momento que jamás vamos a olvidar: el gol agónico de la victoria frente a Platense, el 3 de febrero de 2025. Un grito de desahogo, de pasión pura. Ese tipo de goles que te hacen creer que las cábalas funcionan, que estar ahí tiene sentido.
+        </p>
+        <p>
+          Para algunos es solo fútbol. Para nosotros, es historia, es familia, es Argentinos Juniors.
+        </p>
+
+        <div class="video-container">
+            <video controls>
+                <source src="imagenes/WhatsApp Video 2025-06-17 at 20.36.45.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+        <nav class="paginacion">
+          <a href="art2.html">Siguiente →</a>
+        </nav>
+      </article>
+    </main>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form id="formulario-contacto">
+        <label for="nombre">Nombre:</label><br />
+        <input type="text" id="nombre" name="nombre" required /><br /><br />
+        
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+        
+        <label for="mensaje">Mensaje:</label><br />
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br /><br />
+        
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <div id="mensaje-enviado" class="mensaje-exito">
+      <strong>¡Gracias por tu mensaje!</strong> <br />
+      Lo recibí correctamente y te responderé lo antes posible. <br />
+      ¡Tu apoyo significa mucho para mí!
+    </div>
+
+    <footer>
+      <p style="text-align: center;"> &copy; 2025 Ignacio Cordara. Todos los derechos reservados.</p>
+      <ul>
+        <li>📧 <a href="mailto:igna0409@gmail.com">igna0409@gmail.com</a></li>
+        <li>📷 <a href="https://www.instagram.com/ignacio_cordara/" target="_blank">@ignacio_cordara</a></li>
+        <li>📱 <a href="https://wa.me/5491125110251" target="_blank">+54 9 11 2511-0251</a></li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <script>
+    const formulario = document.getElementById('formulario-contacto');
+    const mensaje = document.getElementById('mensaje-enviado');
+
+    formulario.addEventListener('submit', function(event) {
+      event.preventDefault();
+      mensaje.classList.add('visible');
+      formulario.reset();
+
+      setTimeout(() => {
+        mensaje.classList.remove('visible');
+      }, 10000);
+    });
+  </script>
+</body>
+</html>

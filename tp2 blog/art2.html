@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Las canchas que visité - Blog AAAJ</title>
+  <link rel="icon" type="image/png" href="iconos/icono de la pagina web.png" />
+  <link rel="stylesheet" href="Css/style4.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="fondo"></div>
+
+  <div class="contenido">
+    <header>
+      <nav>
+        <a href="index.html#Inicio">Inicio</a>
+        <a href="index.html#art1">Artículos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Las canchas que visité: mi mini ranking</h1>
+      <time datetime="2025-06-01">1 de junio de 2025</time>
+
+      <article class="articulo2">
+        <p>
+          Todavía no recorrí muchas, pero cada cancha que pisé me dejó algo especial. Este es mi ranking personal:
+        </p>
+        <p>
+          <strong>1. Argentinos Juniors</strong>: Obvio. Es mi casa, mi lugar en el mundo. Nada se compara con alentar al Bicho desde ahí.
+        </p>
+        <p>
+          <strong>2. Huracán (Tomás A. Ducó)</strong>: Tiene un valor sentimental enorme. Ahí salimos campeones en 2010, y cada vez que vamos se siente esa mística. Siempre es lindo volver a un estadio que nos dio tanta alegría y felicidad.
+        </p>
+        <p>
+          <strong>3. Banfield (Florencio Sola)</strong>: Un partidazo. Empatamos sobre el final y ganamos por penales. La tribuna fue una locura. Un partido que no voy a olvidar por el contexto del equipo y la hinchada.
+        </p>
+        <p>
+          <strong>4. Independiente (Libertadores de América)</strong>: Buen ambiente y cancha imponente. Fui por Copa Argentina, una linda experiencia. Aunque perdimos por penales, la hinchada estuvo a la altura.
+        </p>
+        <p>
+          <strong>5. Arsenal (Julio H. Grondona)</strong>: La más tranquila de todas. Partido correcto, pero sin tanto peso emocional.
+        </p>
+
+        <picture>
+          <source media="(min-width: 1024px)" srcset="imagenes/gra.jpg" />
+          <source media="(min-width: 768px)" srcset="imagenes/medi.jpg" />
+          <img src="imagenes/chi.jpg" alt="Imagen de las tribunas" style="max-width: 100%" />
+        </picture>
+
+        <nav class="paginacion">
+          <a href="art1.html">← Anterior</a>
+          <a href="art3.html">Siguiente →</a>
+        </nav>
+      </article>
+    </main>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form id="formulario-contacto">
+        <label for="nombre">Nombre:</label><br />
+        <input type="text" id="nombre" name="nombre" required /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="mensaje">Mensaje:</label><br />
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br /><br />
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <div id="mensaje-enviado" class="mensaje-exito">
+      <strong>¡Gracias por tu mensaje!</strong> <br />
+      Lo recibí correctamente y te responderé lo antes posible.
+      Agradezco mucho que te hayas tomado el tiempo de escribirme y visitar este espacio dedicado con tanta pasión a Argentinos Juniors.
+      <br />¡Tu apoyo significa mucho para mí!
+    </div>
+
+    <footer>
+      <p style="text-align: center;">&copy; 2025 Ignacio Cordara. Todos los derechos reservados.</p>
+      <ul>
+        <li>📧 <a href="mailto:igna0409@gmail.com">igna0409@gmail.com</a></li>
+        <li>📷 <a href="https://www.instagram.com/ignacio_cordara/" target="_blank">@ignacio_cordara</a></li>
+        <li>📱 <a href="https://wa.me/5491125110251" target="_blank">+54 9 11 2511-0251</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script>
+    const formulario = document.getElementById('formulario-contacto');
+    const mensaje = document.getElementById('mensaje-enviado');
+
+    formulario.addEventListener('submit', function (event) {
+      event.preventDefault();
+      mensaje.classList.add('visible');
+      formulario.reset();
+      setTimeout(() => {
+        mensaje.classList.remove('visible');
+      }, 10000);
+    });
+  </script>
+</body>
+</html>

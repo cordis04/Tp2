@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Por qué soy del Bicho - Blog AAAJ</title>
+  <link rel="icon" type="image/png" href="iconos/icono de la pagina web.png" />
+  <link rel="stylesheet" href="Css/style4.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="fondo"></div>
+
+  <div class="contenido">
+    <header>
+      <nav>
+        <a href="index.html#Inicio">Inicio</a>
+        <a href="index.html#art1">Artículos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Gritarlo como nunca y bancarlo siempre: por qué soy del Bicho</h1>
+      <time datetime="2025-06-15">15 de junio de 2025</time>
+
+      <article class="articulo5">
+        <p>
+          Mi historia con Argentinos Juniors empezó gracias a mi tío, que me llevó por primera vez a la cancha. Desde ese momento, algo se despertó en mí. Con cada partido, con cada ida a La Paternal, me fui enamorando de estos colores hasta no poder imaginarme la vida sin ellos.
+        </p>
+
+        <p>
+          Muchos conocidos míos son hinchas de los clubes grandes. Pero cuando les pregunto cuántos partidos vieron en la temporada, la respuesta suele ser siempre la misma: "uno, el clásico". Entonces me surge una pregunta inevitable: ¿qué es ser hincha? Porque mientras ellos se quedan con uno o dos partidos al año, yo defiendo a mi club con pasión, lo sigo en cada fecha, en las buenas y en las malas, grito cada gol como si fuera el último.
+        </p>
+
+        <p>
+          Soy fanático hasta la médula. Cada vez que juega el Bicho dejo todo. Vuelvo afónico, sin voz, sin poder hablar… pero con el corazón lleno. Hay goles que quedaron marcados para siempre: el que le hicimos a Platense en el último minuto, ese que ya mencioné antes, o uno más reciente contra San Lorenzo al minuto 93 —nunca grité tanto un gol como ese. Dos minutos después tuvimos otra que pasó rozando el palo, y todavía se me acelera el pulso cuando lo recuerdo.
+        </p>
+
+        <p>
+          Y cómo olvidar aquellos partidos de Copa Libertadores, donde dejé el alma, alentando hasta el último segundo, con la ilusión intacta.
+        </p>
+
+        <p>
+          Porque ser del Bicho no se trata de títulos ni de modas. Es una forma de vida.
+        </p>
+
+        <blockquote style="text-align: center;">
+          <strong>No elegí ser del Bicho, el Bicho me eligió.</strong>
+        </blockquote>
+
+        <picture>
+          <source media="(min-width: 1024px)" srcset="imagenes/bichogra.jpg">
+          <source media="(min-width: 768px)" srcset="imagenes/bichomid.jpg">
+          <img src="imagenes/bichobot.jpg" alt="Hinchas del Bicho" style="max-width: 100%;">
+        </picture>
+
+        <nav class="paginacion">
+          <a href="art4.html">← Anterior</a>
+          <a href="index.html#Inicio">Volver al inicio</a>
+        </nav>
+      </article>
+    </main>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form id="formulario-contacto">
+        <label for="nombre">Nombre:</label><br />
+        <input type="text" id="nombre" name="nombre" required /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="mensaje">Mensaje:</label><br />
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br /><br />
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <div id="mensaje-enviado" class="mensaje-exito">
+      <strong>¡Gracias por tu mensaje!</strong><br />
+      Lo recibí correctamente y te responderé lo antes posible.
+      Agradezco mucho que te hayas tomado el tiempo de escribirme y visitar este espacio dedicado con tanta pasión a Argentinos Juniors.
+      <br />¡Tu apoyo significa mucho para mí!
+    </div>
+
+    <footer>
+      <p style="text-align: center;">&copy; 2025 Ignacio Cordara. Todos los derechos reservados.</p>
+      <ul>
+        <li>📧 <a href="mailto:igna0409@gmail.com">igna0409@gmail.com</a></li>
+        <li>📷 <a href="https://www.instagram.com/ignacio_cordara/" target="_blank">@ignacio_cordara</a></li>
+        <li>📱 <a href="https://wa.me/5491125110251" target="_blank">+54 9 11 2511-0251</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script>
+    const formulario = document.getElementById('formulario-contacto');
+    const mensaje = document.getElementById('mensaje-enviado');
+
+    formulario.addEventListener('submit', function (event) {
+      event.preventDefault();
+      mensaje.classList.add('visible');
+      formulario.reset();
+      setTimeout(() => {
+        mensaje.classList.remove('visible');
+      }, 10000);
+    });
+  </script>
+</body>
+</html>
